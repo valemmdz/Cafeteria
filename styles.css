@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Avenir Light Italic';
+    src: url('fonts/Avenir-It-W01_35-Light.woff2') format('woff2'),
+         url('fonts/Avenir-It-W01_35-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Estilos del body */
+body {
+    font-family: 'Avenir Light Italic', sans-serif;
+    font-size: 14px;
+    background: #f4f4f4;
+}
+.banner {
+    background-image: url('media/portada logo.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 7rem;
+    color: #7e4550;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos del menú */
+.menu {
+    background-color: #93c1a1;
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu ul li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.menu ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+.logo {
+    display: flex;
+}
+.logo a{
+    height: 57px;
+    width: auto;
+    display: flex;
+}
+.logo a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Estilos del contenido */
+.fullscreen-section {
+    background-color: #f9f5f0;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.fullscreen-image {
+    flex: 0.5;
+    min-height: 100vh;
+    position: relative;
+}
+
+.fullscreen-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.section-content {
+    flex: 1;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.full-width-content {
+    max-width: 1200px !important;
+    width: 100%;
+}
+
+/* Galería de clientes */
+.client-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.client-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.client-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p, ul {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .menu { flex-direction: column; }
+    .logo { margin-bottom: 10px;
+        margin-right: 0px; }
+    .fullscreen-section {
+        flex-direction: column;
+    }
+    .fullscreen-section img{
+        width: 100%;
+       height: 300px;
+       object-fit: cover;
+    }
+
+}
+@media (max-width: 450px) {
+    .menu ul{ flex-direction: column;
+    text-align: center; }
+
+    .client-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+
