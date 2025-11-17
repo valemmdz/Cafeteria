@@ -48,7 +48,7 @@
             <p>Más que clientes, son parte de nuestra familia cafetalera. Disfruta de estos momentos capturados en nuestro espacio.</p>
         </div>
         <div class="client-gallery">
-            <img src="/media/cliente1.jpg" alt="Clientes disfrutando café">
+            <img src="/media/SPOT2.jpg" alt="Clientes disfrutando café">
             <img src="/media/cliente2.jpg" alt="Reunión de trabajo">
             <img src="/media/cliente3.jpg" alt="Evento especial">
         </div>
